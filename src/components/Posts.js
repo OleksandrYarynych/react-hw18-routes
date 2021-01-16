@@ -12,12 +12,12 @@ export default function Posts() {
         postDescription={usersPosts[0].postDescription}
         key={0}
       />
-      <Post         
+      <Post
         uuserName={usersPosts[1].userName}
         avatar={usersPosts[1].avatar}
         postPhoto={usersPosts[1].postPhoto}
         postDescription={usersPosts[1].postDescription}
-        key={0} 
+        key={1}
       />
     </div>
   );

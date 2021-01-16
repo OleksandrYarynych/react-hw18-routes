@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Contact from "./Contact.js";
 import contactsArr from "../dataFiles/contactsArr.js";
 import "../css/contacts.css";
@@ -62,17 +63,23 @@ export default function Contacts() {
         />
         <label>not said</label>
       </div>
-      <div className="contactList">
-        {[...filterArr()].map((contact, i) => (
-          <Contact
-            firstName={contact.firstName}
-            lastName={contact.lastName}
-            phone={contact.phone}
-            gender={contact.gender}
-            key={i}
-          />
-        ))}
-      </div>
+      {[...filterArr()].length !== 0 ? (
+        <div className="contactList">
+          {[...filterArr()].map((contact, i) => (
+            <Link className="link" to={`/contact/:${contact.phone}`}>
+              <Contact
+                firstName={contact.firstName}
+                lastName={contact.lastName}
+                phone={contact.phone}
+                gender={contact.gender}
+                key={i}
+              />
+            </Link>
+          ))}
+        </div>
+      ) : (
+        <p className="not-found-results">results not found</p>
+      )}
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, BrowserRouter as Router, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../App.css";
 
 export default function Nav() {
@@ -14,7 +14,7 @@ export default function Nav() {
       <NavLink className="Link" activeClassName="active-link" to="/posts">
         posts
       </NavLink>
-      <NavLink className="Link" activeClassName="active-link" to="contact">
+      <NavLink className="Link" activeClassName="active-link" to="/contact">
         contacts
       </NavLink>
     </nav>
