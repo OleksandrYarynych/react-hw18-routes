@@ -2,7 +2,6 @@ import React from "react";
 import contactsArr from "../dataFiles/contactsArr";
 
 export default function ChosenContact(props) {
-  debugger;
   const user = contactsArr.find((c) => {
     if (c.phone.toString() === props.match.params.num.slice(1)) return true;
   });
