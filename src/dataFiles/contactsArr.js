@@ -31,7 +31,7 @@ const contacts = [
   {
     firstName: "Теодор",
     lastName: "Мотсбес",
-    phone: "+380956319521",
+    phone: "+380966319521",
     gender: "male",
   },
 ];
