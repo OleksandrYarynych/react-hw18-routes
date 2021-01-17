@@ -25,11 +25,7 @@ export default function Post({
           <button
             className="btn"
             onClick={() => {
-              if (isPostLiked) {
-                setCountLikes(countLikes - 1);
-              } else {
-                setCountLikes(countLikes + 1);
-              }
+              isPostLiked ? setCountLikes(countLikes - 1) : setCountLikes(countLikes + 1);
               setIsPostLikedd(!isPostLiked);
             }}
           >

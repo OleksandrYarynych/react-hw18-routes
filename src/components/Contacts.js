@@ -25,7 +25,7 @@ export default function Contacts() {
         if (isFemaleCheckboxChecked && c.gender === "female") {
           return true;
         }
-        if (isNotSaidCheckboxChecked && c.gender === undefined) {
+        if (isNotSaidCheckboxChecked && !c.gender ) {
           return true;
         }
       }

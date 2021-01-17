@@ -1,9 +1,11 @@
 import React from "react";
 import contactsArr from "../dataFiles/contactsArr";
+import { useParams } from 'react-router-dom'
 
 export default function ChosenContact(props) {
+  const { num } = useParams();
   const user = contactsArr.find((c) => {
-    if (c.phone.toString() === props.match.params.num.slice(1)) return true;
+    if (c.phone.toString() === num.slice(1)) return true;
   });
   console.log(user);
   return (
